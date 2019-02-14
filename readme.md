@@ -2,6 +2,10 @@
 
 AutoDetweeter automatically deletes tweets after a set period of time.
 
+## Twitter Dev Account
+
+You will need to sign up for a Twitter Dev account and create an app. After creating the app, you will need to generate keys for the app in order to use AutoDetweeter.
+
 ## Config
 Use process env variables to set the following values:
 
