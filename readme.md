@@ -14,6 +14,15 @@ Use process env variables to set the following values:
 - `process.env.DELETE_AFTER`
 - `process.env.TIME_UNIT`
 
+## Time Unit and Delete After
+
+`process.env.TIME_UNIT` and `process.env.DELETE_AFTER` are parsed by the moment.js library. [Learn more about valid formats here.](https://momentjs.com/docs/#/parsing/string-format/).
+
+- `process.env.TIME_UNIT` is a string
+- `process.env.DELETE_AFTER` is an integer represented as a string.
+
+ex: 60days would have `TIME_UNIT` of `'d'` and `DELETE_AFTER` would be `'60'`
+
 ## License
 
 AutoDetweeter is Public Domain
