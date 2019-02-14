@@ -1,0 +1,15 @@
+{
+  "name": "autodetweeter",
+  "version": "1.0.0",
+  "description": "Delete tweets automatically after a set period of time",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Nathan Crank",
+  "license": "Public Domain",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "twitter": "^1.7.1"
+  }
+}
