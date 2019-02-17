@@ -23,11 +23,13 @@ getTimeline();
 
 
 function getTimeline() {
+	console.log( 'Getting timeline ...' );
 	client.get(
 		'statuses/user_timeline',
 		{ screen_name: config.screen_name },
 		( error, tweets, response ) => {
 		  if ( !error ) {
+		  	console.log( 'Timeline retrieved.' );
 		    processTweets( tweets );
 		  }
 		}
@@ -35,6 +37,7 @@ function getTimeline() {
 }
 
 function processTweets( tweets ) {
+	console.log( 'Processing tweets ...' );
 	let cutOffDate = moment().subtract( config.deleteAfter, config.timeUnit );
 	for ( let tweet of tweets) {
 		let createdAt = moment( tweet.created_at, config.twitterDateFormat );
@@ -45,6 +48,7 @@ function processTweets( tweets ) {
 }
 
 function deleteTweet( tweet ) {
+	console.log( 'Deleting tweet ' + tweet.id_str );		
 	client.post(
 		'statuses/destroy/' + tweet.id_str + '.json',
 		{ id: tweet.id_str },
