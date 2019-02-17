@@ -25,7 +25,7 @@ getTimeline();
 function getTimeline() {
 	client.get(
 		'statuses/user_timeline',
-		{ screen_name: 'APITest93718128' },
+		{ screen_name: config.screen_name },
 		( error, tweets, response ) => {
 		  if ( !error ) {
 		    processTweets( tweets );
