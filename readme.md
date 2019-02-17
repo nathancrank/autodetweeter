@@ -43,6 +43,3 @@ Best to deploy on [Heroku with a scheduler](https://devcenter.heroku.com/article
 
 AutoDetweeter is Public Domain
 
-## Support
-
-There is no support. This serves my purpose. If it helps you as well, awesome.
