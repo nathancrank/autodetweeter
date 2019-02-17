@@ -2,6 +2,10 @@
 
 AutoDetweeter automatically deletes tweets after a set period of time.
 
+## Twitter Dev Account
+
+You will need to sign up for a Twitter Dev account and create an app. After creating the app, you will need to generate keys for the app in order to use AutoDetweeter.
+
 ## Config
 Use process env variables to set the following values:
 
@@ -13,6 +17,8 @@ Use process env variables to set the following values:
 - `process.env.TWITTER_DATE_FORMAT`
 - `process.env.DELETE_AFTER`
 - `process.env.TIME_UNIT`
+
+Learn more about using process vars [check out Heroku's article.](https://devcenter.heroku.com/articles/config-vars)
 
 ## Time Unit and Delete After
 
