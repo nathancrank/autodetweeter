@@ -35,7 +35,7 @@ Currently: `ddd MMM DD hh:mm:ss ZZ YYYY`
 
 Not sure if that will change, but didn't want to push the code again if it does.
 
-## Deploy on Heroku
+## Deploy on Heroku for Free
 
 Best to deploy on [Heroku with a scheduler](https://devcenter.heroku.com/articles/scheduler).
 
