@@ -46,6 +46,7 @@ function processTweets( tweets ) {
 			deleteTweet(tweet);
 		}
 	}
+	process.exit()
 }
 
 function deleteTweet( tweet ) {
@@ -57,8 +58,6 @@ function deleteTweet( tweet ) {
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
-			// do nothing
-			process.exit()
 		}
 	);
 }
