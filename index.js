@@ -58,10 +58,9 @@ function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );
 	client.post(
 		'statuses/destroy/' + tweet.id_str,
-		{ id: tweet.id_str.toString() },
-		( error, data, response ) => {
+		( error, response ) => {
 			console.log('here')
-			console.log( error, data, response )
+			console.log( error, response )
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
