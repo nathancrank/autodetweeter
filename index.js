@@ -62,4 +62,5 @@ async function deleteTweet( tweet ) {
 			resolve();
 		}
 	} );
+	return;
 }
