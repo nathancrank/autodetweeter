@@ -42,7 +42,6 @@ function getTimeline() {
 
 function processTweets( tweets ) {
 	console.log( 'Processing tweets ...' );
-	console.log( tweets )
 	let cutOffDate = moment().subtract( config.deleteAfter, config.timeUnit );
 	for ( let tweet of tweets) {
 		console.log( 'Processing tweet ' + tweet.id_str + '.' )
