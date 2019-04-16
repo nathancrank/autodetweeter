@@ -32,10 +32,10 @@ function getTimeline() {
 			include_rts: true,
 			count: 200
 		},
-		( error, tweets, response ) => {
+		( error, data, response ) => {
 		  if ( !error ) {
 		  	console.log( 'Timeline retrieved.' );
-		    processTweets( tweets );
+		    processTweets( data );
 		  }
 		}
 	);
@@ -66,4 +66,5 @@ function deleteTweet( tweet ) {
 			}
 		}
 	);
+	console.log('here')
 }
