@@ -1,4 +1,4 @@
-const Twitter = require('twitter');
+const Twitter = require('twit');
 const moment = require('moment');
 
 
@@ -58,11 +58,9 @@ function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );
 	client.post(
 		'statuses/destroy/:id',
-		{
-			id: tweet.id_str.toString()
-		},
-		( error, tweets, response ) => {
-			console.log( error, tweets, response )
+		{ id: tweet.id_str.toString() },
+		( error, data, response ) => {
+			console.log( error, data, response )
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
