@@ -28,8 +28,9 @@ function getTimeline() {
 		'statuses/user_timeline',
 		{
 			screen_name: config.screen_name,
-			exclude_replies: 0,
-			include_rts: 1
+			exclude_replies: false,
+			include_rts: true,
+			count: 200
 		},
 		( error, tweets, response ) => {
 		  if ( !error ) {
