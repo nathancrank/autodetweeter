@@ -57,7 +57,7 @@ function processTweets( tweets ) {
 function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );
 	client.post(
-		'statuses/destroy/1096147767783817221.json',
+		'1.1/statuses/destroy/1096147767783817221.json',
 		( error, response ) => {
 			console.log('here')
 			console.log( error, response )
