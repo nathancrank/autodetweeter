@@ -51,7 +51,7 @@ function processTweets( tweets ) {
 
 async function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );		
-	await new Promise((resolve) => {
+	return new Promise((resolve) => {
 		client.post(
 		'statuses/destroy/' + tweet.id_str + '.json',
 		{ id: tweet.id_str },
@@ -62,5 +62,4 @@ async function deleteTweet( tweet ) {
 			resolve();
 		}
 	} );
-	return;
 }
