@@ -58,7 +58,6 @@ async function deleteTweet( tweet ) {
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
-			resolve();
 		}
 	);
 }
