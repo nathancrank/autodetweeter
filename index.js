@@ -51,13 +51,15 @@ function processTweets( tweets ) {
 
 async function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );		
-	await client.post(
+	await new Promise((resolve) => {
+		client.post(
 		'statuses/destroy/' + tweet.id_str + '.json',
 		{ id: tweet.id_str },
 		( error, tweets, response ) => {
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
+			resolve();
 		}
-	);
+	} );
 }
