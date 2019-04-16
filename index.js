@@ -55,7 +55,8 @@ function processTweets( tweets ) {
 }
 
 function deleteTweet( tweet ) {
-	console.log( 'Deleting tweet ' + tweet.id_str );		
+	console.log( 'Deleting tweet ' + tweet.id_str );
+	console.log(client.post)	
 	client.post(
 		'statuses/destroy/:id',
 		{ id: tweet.id },
