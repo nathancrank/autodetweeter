@@ -59,7 +59,7 @@ async function deleteTweet( tweet ) {
 		await client.post(
 		'statuses/destroy/' + tweet.id_str + '.json',
 		{ id: tweet.id_str },
-		( error, tweets, response ) => {
+		( error, response ) => {
 			console.log( response )
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
