@@ -47,7 +47,6 @@ function processTweets( tweets ) {
 	for ( let tweet of tweets) {
 		console.log( 'Processing tweet ' + tweet.id_str + '.' )
 		let createdAt = moment( tweet.created_at, config.twitterDateFormat );
-		console.log( tweet.text, createdAt, cutOffDate, createdAt.isBefore( cutOffDate ) )
 		if ( createdAt.isBefore( cutOffDate ) ) {
 			deleteTweet(tweet);
 		}
@@ -61,6 +60,7 @@ async function deleteTweet( tweet ) {
 		'statuses/destroy/' + tweet.id_str + '.json',
 		{ id: tweet.id_str },
 		( error, tweets, response ) => {
+			console.log( response )
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
