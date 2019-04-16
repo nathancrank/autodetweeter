@@ -56,11 +56,11 @@ function processTweets( tweets ) {
 
 async function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );		
-		client.post(
+		await client.post(
 		'statuses/destroy/:id',
 		{ id: tweet.id_str },
-		( error, response ) => {
-			console.log( error, response )
+		( error, params, response ) => {
+			console.log( error, params, response )
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
