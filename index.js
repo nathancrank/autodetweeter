@@ -24,7 +24,7 @@ getTimeline();
 
 function getTimeline() {
 	console.log( 'Getting timeline ...' );
-	await client.get(
+	client.get(
 		'statuses/user_timeline',
 		{
 			screen_name: config.screen_name,
@@ -54,9 +54,9 @@ function processTweets( tweets ) {
 	process.exit()
 }
 
-async function deleteTweet( tweet ) {
+function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );		
-	await client.post(
+	client.post(
 		'statuses/destroy/:id',
 		{ id: tweet.id },
 		( error, tweets, response ) => {
