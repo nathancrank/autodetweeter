@@ -27,7 +27,7 @@ function getTimeline() {
 	client.get(
 		'statuses/user_timeline',
 		{
-			screen_name: config.screen_name,
+			name: config.screen_name,
 			exclude_replies: false,
 			include_rts: true
 		},
