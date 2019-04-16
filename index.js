@@ -49,7 +49,7 @@ function processTweets( tweets ) {
 	process.exit()
 }
 
-async function deleteTweet( tweet ) {
+function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );		
 	return new Promise((resolve) => {
 		client.post(
