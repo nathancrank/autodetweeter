@@ -60,11 +60,11 @@ function deleteTweet( tweet ) {
 		'statuses/destroy/:id',
 		{ id: tweet.id_str.toString() },
 		( error, data, response ) => {
+			console.log('here')
 			console.log( error, data, response )
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
 		}
 	);
-	console.log('here')
 }
