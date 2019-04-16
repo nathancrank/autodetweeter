@@ -48,16 +48,7 @@ function processTweets( tweets ) {
 		console.log( 'Processing tweet ' + tweet.id_str + '.' )
 		let createdAt = moment( tweet.created_at, config.twitterDateFormat );
 		if ( createdAt.isBefore( cutOffDate ) ) {
-			client.post(
-				'statuses/destroy/:id',
-				{ id: tweet.id_str },
-				( error, response ) => {
-					console.log( error, response )
-					if ( !error ) {
-						console.log( 'Deleted tweet ' + tweet.id_str );
-					}
-				}
-			);
+			deleteTweet(tweet);
 		}
 	}
 	process.exit()
@@ -65,7 +56,7 @@ function processTweets( tweets ) {
 
 function deleteTweet( tweet ) {
 	console.log( 'Deleting tweet ' + tweet.id_str );
-	client.post(
+	client.POST(
 		'statuses/destroy/:id',
 		{ id: tweet.id_str },
 		( error, response ) => {
