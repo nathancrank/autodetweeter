@@ -60,7 +60,7 @@ async function deleteTweet( tweet ) {
 		'statuses/destroy/' + tweet.id_str,
 		{ id: tweet.id_str },
 		( error, tweets, response ) => {
-			console.log( response )
+			console.log( error, tweets, response )
 			if ( !error ) {
 				console.log( 'Deleted tweet ' + tweet.id_str );
 			}
