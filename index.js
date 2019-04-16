@@ -26,7 +26,11 @@ function getTimeline() {
 	console.log( 'Getting timeline ...' );
 	client.get(
 		'statuses/user_timeline',
-		{ screen_name: config.screen_name },
+		{
+			screen_name: config.screen_name,
+			exclude_replies: false,
+			include_rts: true
+		},
 		( error, tweets, response ) => {
 		  if ( !error ) {
 		  	console.log( 'Timeline retrieved.' );
@@ -38,7 +42,6 @@ function getTimeline() {
 
 function processTweets( tweets ) {
 	console.log( 'Processing tweets ...' );
-	console.log( tweets.length )
 	console.log( tweets )
 	let cutOffDate = moment().subtract( config.deleteAfter, config.timeUnit );
 	for ( let tweet of tweets) {
