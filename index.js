@@ -1,8 +1,8 @@
-const Twitter = require('twit');
+const Twit = require('twit');
 const moment = require('moment');
 
 
-const client = new Twitter({
+const client = new Twit({
   consumer_key: process.env.CONSUMER_KEY,
   consumer_secret: process.env.CONSUMER_SECRET,
   access_token_key: process.env.ACCESS_TOKEN_KEY,
