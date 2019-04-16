@@ -59,7 +59,7 @@ function deleteTweet( tweet ) {
 	client.post(
 		'statuses/destroy/:id',
 		{
-			id: tweet.id
+			id: tweet.id_str.toString()
 		},
 		( error, tweets, response ) => {
 			console.log( error, tweets, response )
