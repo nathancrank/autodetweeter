@@ -24,7 +24,7 @@ getTimeline();
 
 function getTimeline() {
 	console.log( 'Getting timeline ...' );
-	client.get(
+	await client.get(
 		'statuses/user_timeline',
 		{
 			screen_name: config.screen_name,
