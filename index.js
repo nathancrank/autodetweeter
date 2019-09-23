@@ -48,6 +48,7 @@ function processTweets( tweets ) {
 		console.log( 'Processing tweet ' + tweet.id_str + '.' )
 		let createdAt = moment( tweet.created_at, config.twitterDateFormat );
 		if ( createdAt.isBefore( cutOffDate ) ) {
+			console.log( 'Deleting tweet ' + tweet.id_str )
 			deleteTweet(tweet);
 		}
 	}
